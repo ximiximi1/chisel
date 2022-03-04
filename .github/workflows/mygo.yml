@@ -17,9 +17,9 @@ jobs:
         go-version: 1.17
 
     - name: Build
-      run: go build -v -o chisel ./...
+      run: go build -v -o ./build/chisel ./...
 
     - uses: actions/upload-artifact@v3
       with:
         name: my-artifact
-        path: ./chisel
+        path: ./build/chisel
