@@ -18,7 +18,7 @@ jobs:
 
     - run: env GOOS=windows GOARCH=amd64 go build -v -ldflags="-s -w" -o ./build/chisel.exe
     - run: env GOOS=linux GOARCH=amd64 go build -v -ldflags="-s -w" -o ./build/chisel
-    - run: env GOOS=linux GOARCH=GOARCH=mipsle GOMIPS=softfloat go build -v -ldflags="-s -w" -o ./build/chisel_sf
+    - run: env GOOS=linux GOARCH=mipsle GOMIPS=softfloat go build -v -ldflags="-s -w" -o ./build/chisel_sf
 
     - uses: actions/upload-artifact@v3
       with:
